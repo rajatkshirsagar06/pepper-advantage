@@ -1,0 +1,34 @@
+<mat-drawer-container class="mat-drawer-container" autosize>
+    <mat-drawer #drawer class="mat-drawer-wrapper sidenav" mode="side">
+        <div class="side-navigation">
+            <div class="header-container">
+               
+                <div class="logo-container">
+                    <img src="assets\icons\pepperAdvantge.svg" />
+                </div>
+                <div class="cross-icon-container" (click)="drawer.toggle()">
+                    <img src="assets\icons\cross.svg" />
+                </div>
+        
+            </div>
+            <div class="seperator"></div>
+            <div class="menu-container" (click)="navigateToHomePage()">
+                <div class="home-img-container">
+                    <img src="assets\icons\home.svg" />
+                </div>
+              
+                <span  class="home-text">{{'sideNavBar.home' | cultureTranslate}}</span>
+            </div>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content class="mat-drawer-content-container">
+        <div class="nav-bar-header-container">
+            <pa-header [name]="userName" (openSideBar)="drawer.toggle()"></pa-header>
+        </div>
+        <div class="detail-screen">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+
+</mat-drawer-container>

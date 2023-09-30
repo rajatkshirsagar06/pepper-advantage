@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/mixins.scss';
+@import '../../../../assets/styles/variables.scss';
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .label {
+        color: #2c445f;
+        @include medium-text;
+    }
+
+    input {
+        width: 100%;
+        outline: none;
+        border-radius: .25rem;
+        border: .06rem solid $purple;
+        background: $white;
+        color: #1f2232;
+        @include medium-text;
+    }
+
+    ::placeholder {
+        color: val(--revamp-text-text-secondary, #62646f);
+        @include medium-text;
+    }
+
+}

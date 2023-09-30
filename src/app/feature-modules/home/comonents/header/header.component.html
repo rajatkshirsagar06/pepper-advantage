@@ -1,0 +1,22 @@
+
+<div class="header-section">
+    <div class="side-bar" (click)="openSideBar.emit()">
+            <img src="assets\icons\hamburger.svg" />
+    </div>
+    <div class="header">
+        <div class="header-titles">
+                    <img src="assets\icons\pepperAdvantge.svg" />
+        </div>
+        <div class="info-container">
+            <div class="questionmark">
+                <img src="assets\icons\questionMark.svg" />
+            </div>
+            <div class="notification">
+                <img src="assets\icons\notification.svg" />
+            </div>
+            <div (click)="logout()">
+                <pa-user-tag [name]="name" class="user-thumbnail"></pa-user-tag>
+            </div>
+        </div>
+    </div>
+</div>

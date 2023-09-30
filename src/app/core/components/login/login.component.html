@@ -1,0 +1,65 @@
+<div class="login-container">
+    <div class="login-wrapper">
+        <div class="icon-container">
+            <div class="pepper-container">
+                <img src="assets\icons\pepper.svg" />
+            </div>
+            <div class="separator">
+            </div>
+            <div>
+                <img src="assets\icons\advantage.svg" />
+            </div>
+        </div>
+        <div class="welcome-click-container">
+            <div class="welcome-text">
+                {{'login.welcome' | cultureTranslate}}
+            </div>
+            <div class="click-below-text">
+                {{'login.click' | cultureTranslate}}
+            </div>
+        </div>
+        <div class="login-field-container">
+            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="input-container">
+                    <div>
+                        <pa-input [label]="'Username'"
+                        [type]="'text'"
+                        [placeholder]="'Enter your username'"
+                        formControlName="username" 
+                        [ngClass]="{
+                            'text-danger':username?.invalid && (username?.dirty || username?.touched)
+                        }"></pa-input>
+                    </div>
+                    <div>
+                        <span class="text-danger"
+                        *ngIf="username?.invalid && (username?.dirty || username?.touched)">{{'login.errorMessage' | cultureTranslate}}</span>
+                    </div>
+                   
+                </div>
+                <div class="input-container">
+                    
+                <pa-input [label]="'password'"
+                [type]="'password'"
+                [placeholder]="'Enter your password'"
+                formControlName="password"
+                [ngClass]="{
+                    'text-danger': password?.invalid && (password?.dirty || password?.touched)
+                }"></pa-input>
+                    <span class="text-danger"
+                        *ngIf="password?.invalid && (password?.dirty || password?.touched)">{{'login.errorMessagePassword' | cultureTranslate}}</span>
+                </div>
+                <button class="submit-button" type="submit"
+                    (click)="onSubmit()">{{'login.signIn' | cultureTranslate}}</button>
+            </form>
+            <div class="helper-container">
+                <div class="help-text">
+                    {{'login.helpText' | cultureTranslate}}
+                </div>
+                <div class="contact-text">
+                    {{'login.contact' | cultureTranslate}}
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>

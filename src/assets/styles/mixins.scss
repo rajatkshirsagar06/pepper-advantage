@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+@mixin large-text {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 1.06rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.44rem;
+}
+@mixin medium-text {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: .69rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: .94rem;
+}
+@mixin small-text {
+    color: $white;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: .63rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: .88rem;
+    text-transform: capitalize;
+}
+
+@mixin welcome-text {
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+        /* Main Wireframing/H1 */
+        font-family: Roboto;
+        font-size: 1.13rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5rem;
+}
+
+@mixin feedback-form-bredcums-text {
+    font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: .75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.13rem;
+}
+@mixin feedback-button-text {
+    font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: .75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.13rem;
+}

@@ -1,0 +1,20 @@
+<div class="detail-container">
+    <div class="welcome-text">
+        {{'home.welcome' | cultureTranslate}}  {{name}} !
+    </div>
+    <div class="feedback-list-container">
+        <div class="feedback-text">
+        {{'home.feedback' | cultureTranslate}}
+        </div>
+        <div class="add-new-container" (click)="onAddNew()">
+        <img src="assets\icons\plus.svg" />
+            <div class="add-new-text" >{{'home.add'| cultureTranslate}}</div>
+        </div>
+    </div>
+    <div class="feedback-card-container">
+        <ng-container *ngFor="let feedback of feedbackData">
+            <pa-feedback-card [name]="name" [feedbackData]="feedback"></pa-feedback-card>
+        </ng-container>
+       
+    </div>
+</div>

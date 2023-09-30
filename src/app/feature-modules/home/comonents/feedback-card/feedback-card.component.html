@@ -1,0 +1,14 @@
+<div class="feedback-card-conatiner">
+    <div class="user-tag-conatiner">
+        <pa-user-tag [name]="name"></pa-user-tag>
+    </div>
+    <div class="feedback-text">
+   {{feedbackData.comment}}
+    </div>
+    <div class="rating-container">
+        <pa-rating-star [rating]="feedbackData.rating" [starCount]="feedbackData.starCount"></pa-rating-star>
+    </div>
+    <div class="date-container">
+            {{feedbackData.date}}
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.feedback-card-conatiner {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    gap: 1.25rem;
+    align-self: stretch;
+    border-radius: .31rem;
+    border: .06rem solid var(--stroke-light, #E0E0E0);
+    background-color: var(--gray-light-grey, #FAFAFA);
+
+    .user-tag-conatiner {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .feedback-text {
+        flex: 1 0 0;
+        color: #000;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: .88rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25rem;
+    }
+
+    .rating-container {
+         .mat-mdc-icon-button.mat-mdc-button-base {
+                width: 1.88rem !important;
+            }
+    }
+
+    .date-container {
+        color: var(--typography-label, #5C6166);
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        /* Main Wireframing/H2 Regular */
+        font-family: Roboto;
+        font-size: .88rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem;
+        /* 142.857% */
+    }
+}
+.mat-mdc-icon-button.mat-mdc-button-base {
+    width: 1.88rem !important;
+}

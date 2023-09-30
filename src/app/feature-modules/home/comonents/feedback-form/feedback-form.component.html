@@ -1,0 +1,48 @@
+<div class="feedback-form-container">
+    <div class="heading-breadcum-container">
+        <div class="heading-text">
+            {{'feedback.addFeedback' | cultureTranslate}}
+        </div>
+        <div class="breadcrumb-container">
+            <span class="home" (click)="navigateToHomePage()">
+                {{'feedback.home' | cultureTranslate}}
+            </span>
+            <span class="separator">
+                /
+            </span>
+            <span class="feedback-form">
+            {{'feedback.feedbackFormButton' | cultureTranslate}}
+            </span>
+        </div>
+    </div>
+    <div class="feedback-form-header">
+       {{'feedback.feedbackForm' | cultureTranslate}}
+    </div>
+    <div class="feedback-rating-input-container">
+    <form [formGroup]="ratingForm" class="form-container">
+        <div class="add-feedback">
+            <div class="feedback-input">
+            {{'feedback.feedbackInput' | cultureTranslate}}
+            </div>
+            <div class="input-feild">
+                <input type="text" formControlName="ratingComment" class="add-feedback-box" required>
+            </div>
+        </div>
+        <div class="ratings-cointainer">
+            <div class="rating">
+            {{'feedback.rating' | cultureTranslate}}
+            </div>
+            <div class="rating-cointainer">
+                <pa-rating-star [rating]="rating" [starCount]="starCount"
+                    (ratingUpdated)="onRatingChanged($event)"></pa-rating-star>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="back-button" type="submit"
+                (click)="navigateToHomePage()">{{'feedback.back' | cultureTranslate}}</button>
+            <button class="submit-button" type="submit"
+                (click)="onSubmit()">{{'feedback.submitForm' | cultureTranslate}}</button>
+        </div>
+    </form>
+    </div>
+</div>

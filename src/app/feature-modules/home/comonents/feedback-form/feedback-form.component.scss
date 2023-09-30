@@ -1,0 +1,168 @@
+@import '../../../../../assets/styles/variables.scss';
+@import '../../../../../assets/styles/mixins.scss';
+
+.feedback-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.88rem;
+    gap: 1.88rem;
+
+    .heading-breadcum-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .heading-text {
+            color: $black;
+            @include large-text
+        }
+
+        .breadcrumb-container {
+            display: flex;
+            padding: .63rem;
+            align-items: flex-start;
+            gap: .63rem;
+            border-radius: .31rem;
+            background: $offWhite;
+
+            .home {
+                color: $ivory;
+                cursor: pointer;
+                @include feedback-form-bredcums-text
+            }
+
+            .separator {
+                color: $ivory;
+                @include feedback-form-bredcums-text
+            }
+
+            .feedback-form {
+                color: var(--primary-colours-red-df-0024, #DF0024);
+                @include feedback-form-bredcums-text
+            }
+        }
+    }
+
+    .feedback-form-header {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: .88rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25rem;
+    }
+
+    .feedback-rating-input-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: .63rem;
+
+            .add-feedback {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                width: 100%;
+                flex: 1 0 0;
+
+                .feedback-input {
+                    color: #000;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: Roboto;
+                    font-size: .75rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.13rem;
+                }
+
+                .input-feild {
+                    display: flex;
+                    align-self: stretch;
+                    height: 6.25rem;
+
+
+                    .add-feedback-box {
+                        display: flex;
+                        padding: .75rem;
+                        align-items: flex-start;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        align-self: stretch;
+                        border-radius: .25rem;
+                        border: .06rem solid var(--light-forms-border, #CBD5E1);
+                        background: var(--light-forms-background, #FFF);
+                    }
+                }
+            }
+
+            .ratings-cointainer {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .63rem;
+
+                .rating {
+                    color: $black;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: Roboto;
+                    font-size: .75rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.13rem;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                height: 21.25rem;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1.88rem;
+                flex-shrink: 0;
+                align-self: stretch;
+
+                .back-button {
+                    display: flex;
+                    padding: .75rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    border-radius: .25rem;
+                    border: .06rem solid $purple;
+                    background: $white;
+                    cursor: pointer;
+
+                    color: $purple;
+                    @include feedback-button-text
+                }
+
+                .submit-button {
+                    display: flex;
+                    padding: .75rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    border-radius: .25rem;
+                    background: $purple;
+                    cursor: pointer;
+
+                    color: $white;
+                    @include feedback-button-text
+                }
+            }
+        }
+
+
+    }
+
+}

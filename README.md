@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Login info
+
+use below information for login
+You can use userId or name as username
+{
+userId: 'rajatKshirsagar@pepperadvantage.in',
+password: 'Rajat@123',
+name: 'Rajat',
+},
+{
+userId: 'bhavinpatel@pepperadvantage.in',
+password: 'Bhavin@123',
+name: 'Bhavin',
+},
