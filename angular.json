@@ -20,6 +20,8 @@
             "outputPath": "dist/pepper-advantage",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "https://rajatkshirsagar06.github.io/pepper-advantage/",
+            // "deployUrl": "http://127.0.0.1:5500/pepper-advantage/dist/pepper-advantage/",
             "polyfills": [
               "zone.js"
             ],
@@ -44,11 +46,11 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "200kb",
+                  "maximumError": "400kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none"
             },
             "development": {
               "buildOptimizer": false,
